@@ -1,0 +1,16 @@
+/.idea
+/.target
+/Chessmanager.iml
+
+# IntelliJ specific files and folders
+.idea/
+*.iml
+out/
+
+# Maven
+target/
+
+# VSC
+.vscode/
+
+

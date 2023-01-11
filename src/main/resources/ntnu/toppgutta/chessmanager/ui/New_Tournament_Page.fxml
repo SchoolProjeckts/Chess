@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXDatePicker?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntnu.toppgutta.chessmanager.ui.NewTournamentPageController">
+   <top>
+      <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1440.0" spacing="420.0" style="-fx-background-color: #0B0B45;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="76.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/Chess_Pieces.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="New Tournament">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1440.0" style="-fx-background-color: #0B0B45;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="newTournamentTournamentHomeButton" onMouseClicked="#newTournamentHomePagePaneClick" prefHeight="146.0" prefWidth="480.0" style="-fx-background-color: #0B0B45;">
+               <children>
+                  <ImageView fitHeight="43.0" fitWidth="77.0" layoutX="220.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../images/home.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="170.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tournaments" wrappingWidth="158.099609375">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane prefHeight="146.0" prefWidth="480.0" style="-fx-background-color: #0B0B45;">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <children>
+                  <Text fill="WHITE" layoutX="139.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Tournament">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="48.0" fitWidth="59.0" layoutX="210.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../images/plus-circle2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Pane>
+            <Pane fx:id="newTournamentHelpButton" onMouseClicked="#newTournamentPageHelpPaneClick" prefHeight="146.0" prefWidth="480.0" style="-fx-background-color: #0B0B45;">
+               <children>
+                  <ImageView fitHeight="51.0" fitWidth="61.0" layoutX="236.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../images/help-circle.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="236.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Help">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <SplitPane dividerPositions="0.2816" prefHeight="598.0" prefWidth="1440.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <Text layoutX="22.0" layoutY="448.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Info">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="16.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Text>
+                        <MFXTextField fx:id="tournamentName" alignment="TOP_LEFT" layoutX="15.0" layoutY="179.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="236.0" />
+                        <MFXDatePicker fx:id="newTournamentDate" layoutX="20.0" layoutY="292.0" prefHeight="42.0" prefWidth="237.0" />
+                        <Text layoutX="19.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" wrappingWidth="74.08203125">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="20.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tournament details" underline="true">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Text>
+                        <TextArea fx:id="newTournamentInfo" layoutX="21.0" layoutY="455.0" prefHeight="139.0" prefWidth="373.0" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="709.0">
+                     <children>
+                        <TableView fx:id="newTournamentPlayerList" layoutX="428.0" layoutY="47.0" prefHeight="472.0" prefWidth="535.0">
+                          <columns>
+                            <TableColumn fx:id="newTournamentTaableColumPlayers" prefWidth="535.0" style="-fx-alignment: CENTER;" text="Players" />
+                          </columns>
+                        </TableView>
+                        <Label fx:id="newTournamentNumberOfPlayers" alignment="CENTER" layoutX="262.0" layoutY="471.0" prefHeight="54.0" prefWidth="48.0" style="-fx-border-color: #0B0B45;" text="0">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Label>
+                        <Text layoutX="23.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player details" underline="true">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Text>
+                        <MFXTextField fx:id="playerNameHere" alignment="TOP_LEFT" layoutX="11.0" layoutY="176.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#newTournamentAddPlayerButtonPressed" prefHeight="36.0" prefWidth="251.0" />
+                        <Text layoutX="16.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="21.0" layoutY="508.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of players:" wrappingWidth="229.16015625">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Text>
+                        <MFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="350.0" layoutY="260.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="41.0" onAction="#newTournamentAddPlayerButtonPressed" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #87CEFA;" textAlignment="JUSTIFY" textOverrun="WORD_ELLIPSIS" wrapText="true" />
+                        <MFXButton contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="350.0" layoutY="330.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#newTournamentRemovePlayerButton" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #B22222;" wrapText="true" />
+                        <MFXButton graphicTextGap="10.0" layoutX="824.0" layoutY="533.0" onAction="#newTournamentFinnishButtonPressed" prefHeight="49.0" prefWidth="139.0" style="-fx-background-color: #006400;" text="Create" textFill="WHITE">
+                           <graphic>
+                              <FontIcon iconColor="WHITE" iconLiteral="eli-check" iconSize="20" mouseTransparent="true" />
+                           </graphic>
+                        </MFXButton>
+                        <FontIcon iconColor="WHITE" iconLiteral="eli-plus" iconSize="20" layoutX="361.0" layoutY="291.0" mouseTransparent="true" selectionEnd="0" text="" />
+                        <FontIcon iconColor="WHITE" iconLiteral="eli-remove" iconSize="20" layoutX="361.0" layoutY="358.0" mouseTransparent="true" selectionEnd="0" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

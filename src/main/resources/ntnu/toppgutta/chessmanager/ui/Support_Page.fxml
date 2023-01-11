@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntnu.toppgutta.chessmanager.ui.SupportPageController">
+   <top>
+      <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="100.0" prefWidth="1440.0" spacing="550.0" style="-fx-background-color: #0B0B45;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="76.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/Chess_Pieces.png" />
+               </image>
+            </ImageView>
+            <Label text="Support" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1440.0" BorderPane.alignment="CENTER">
+         <children>
+            <FlowPane onMouseClicked="#supportPageHomeImageClick" prefHeight="100.0" prefWidth="480.0" style="-fx-background-color: #0B0B45; -fx-border-color: #000000;">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="480.0">
+                     <children>
+                        <ImageView fitHeight="43.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../images/home.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Tournaments" textFill="WHITE">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </FlowPane>
+            <FlowPane onMouseClicked="#newTournamentPaneButton" prefHeight="100.0" prefWidth="480.0" style="-fx-background-color: #0B0B45; -fx-border-color: #000000;">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="480.0">
+                     <children>
+                        <ImageView fitHeight="43.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../images/plus-circle2.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="New Tournament" textFill="WHITE">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </FlowPane>
+            <FlowPane prefHeight="100.0" prefWidth="480.0" style="-fx-background-color: #0B0B45; -fx-border-color: #000000;">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="480.0">
+                     <children>
+                        <ImageView fitHeight="43.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../images/help-circle.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Support" textFill="WHITE">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </FlowPane>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <Pane prefHeight="493.0" prefWidth="1440.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#0b0b45" layoutX="58.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Creating a new tournament">
+               <font>
+                  <Font name="Apple SD Gothic Neo Regular" size="24.0" />
+               </font>
+            </Text>
+            <TextArea editable="false" layoutX="55.0" layoutY="90.0" prefHeight="329.0" prefWidth="490.0" style="-fx-border-width: 0;" text="1. Click &quot;New Tournament&quot; at the bottom of this page.&#10;&#10;2. Give us information regarding your tournament.&#10;&#10;        2.1 Tournament name, date and additional information.&#10;&#10;        2.2 Add minumumplayer by writing the name of the player &#10;                 and click the + sign. You will see the players you added&#10;                 in the players table to the right on the screen.&#10;&#10;        2.3 Click the &quot;Create&quot; button to create your tournament.&#10;&#10;3. Congratulations! You have now made a new tournament.&#10;&#10;" />
+            <Text fill="#0b0b45" layoutX="741.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Editing an existing tournament">
+               <font>
+                  <Font name="Apple SD Gothic Neo Regular" size="24.0" />
+               </font>
+            </Text>
+            <TextArea editable="false" layoutX="743.0" layoutY="88.0" prefHeight="332.0" prefWidth="537.0" text="1. Click &quot;Tournaments&quot; at the bottom of this page.&#10;&#10;2. In the tournament table, click the tournament you wish to edit and click &#10;     &quot;View Tournament&quot;.&#10;&#10;3. Here you can see information about the tournament, including matches and &#10;     playerscore. To:&#10;&#10;     a) Remove a match, click the match you would like to remove in the Matches table,&#10;          and click &quot;Remove Match&quot;&#10;&#10;     b) Set player score, select a player from the Score Board table, and click &quot;Set Score&quot;.&#10;          Here, you can adjust the players points, wins, ties and losses.&#10;&#10;4. To exit the tournament editing, click &quot;Finish&quot;, which is located at the bottom of the &#10;     &quot;Score Board&quot; table.&#10;&#10;" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

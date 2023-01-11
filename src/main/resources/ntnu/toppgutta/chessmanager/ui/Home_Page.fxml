@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ntnu.toppgutta.chessmanager.ui.HomePageController">
+   <top>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1440.0" spacing="375.0" style="-fx-background-color: #0B0B45;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/Chess_Pieces.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="10.0" top="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Tournament Manager">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="15.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1440.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="101.0" prefWidth="480.0" spacing="5.0" style="-fx-background-color: #0B0B45; -fx-border-color: #0000;">
+               <children>
+                  <ImageView fitHeight="39.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../images/home.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="210.0" top="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Tournaments">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="165.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </VBox>
+            <FlowPane fx:id="homePageNewTournamentPane" onMouseClicked="#homePageNewTournamentPaneClick" prefHeight="200.0" prefWidth="480.0" style="-fx-background-color: #0B0B45; -fx-border-color: #000000;">
+               <children>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="480.0" spacing="5.0">
+                     <children>
+                        <ImageView fitHeight="49.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../images/plus-circle2.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="220.0" top="10.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="New Tournaments">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="160.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+            </FlowPane>
+            <FlowPane fx:id="homePageHelpPane" onMouseClicked="#homePageHelpPaneClick" prefHeight="200.0" prefWidth="480.0" style="-fx-background-color: #0B0B45; -fx-border-color: #000000;">
+               <children>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="478.0" spacing="5.0">
+                     <children>
+                        <ImageView fitHeight="44.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../images/help-circle.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="220.0" top="10.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Help">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="220.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                     <FlowPane.margin>
+                        <Insets />
+                     </FlowPane.margin>
+                  </VBox>
+               </children>
+            </FlowPane>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tournamentList" layoutX="327.0" layoutY="77.0" prefHeight="463.0" prefWidth="750.0">
+              <columns>
+                <TableColumn fx:id="tournamentColumn" prefWidth="750.0" text="Tournaments" />
+              </columns>
+            </TableView>
+            <VBox layoutX="18.0" layoutY="18.0" prefHeight="563.0" prefWidth="304.0" spacing="60.0">
+               <children>
+                  <MFXButton fx:id="viewTournamentButton" layoutX="61.0" layoutY="337.0" onAction="#openTournament" prefHeight="65.0" prefWidth="204.0" style="-fx-background-color: #006400;" text="View Tournament" textFill="WHITE">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets left="50.0" top="200.0" />
+                     </VBox.margin>
+                     <graphic>
+                     </graphic>
+                     <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="eli-eye-open" iconSize="20" translateX="-10.0" />
+                     </graphic>
+                  </MFXButton>
+                  <MFXButton onAction="#removeTournamentFromTournamentList" prefHeight="65.0" prefWidth="204.0" style="-fx-background-color: #B22222;" text="Delete Tournament" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="51.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="eli-remove" iconSize="20" translateX="-10.0" />
+                     </graphic>
+                  </MFXButton>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
